@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Academic Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-brain"></i> AI Academic Planner</h1>
+            <div class="header-user">
+                <span id="welcome-msg">Welcome!</span>
+                <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+            <p>Enter your tasks and let the AI build your smart study schedule!</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="task-input">Subject or Task</label>
+                <input type="text" id="task-input" placeholder="e.g., 'Math Chapter 3'">
+            </div>
+            <div class="input-group">
+                <label for="due-date-input">Due Date</label>
+                <input type="date" id="due-date-input">
+            </div>
+            <div class="input-group">
+                <label for="difficulty-input">Difficulty</label>
+                <select id="difficulty-input">
+                    <option value="1">Easy</option>
+                    <option value="3" selected>Medium</option>
+                    <option value="5">Hard</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="pdf-file-input">Attach File (Optional)</label>
+                <input type="file" id="pdf-file-input" accept=".pdf"> 
+            </div>
+            
+            <button id="add-task-btn" title="Add task"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+
+        <div class="content-split">
+            <div class="task-list-container">
+                <h2><i class="fa-solid fa-list-check"></i> Pending Tasks</h2>
+                <div id="task-list"></div>
+                <button id="generate-plan-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Study Plan
+                </button>
+            </div>
+            
+            <div class="plan-container">
+                <h2><i class="fa-solid fa-calendar-days"></i> Your AI Study Plan</h2>
+                <div id="study-plan">
+                    <p class="placeholder">Your generated plan will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
