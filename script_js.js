@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. AUTHENTICATION CHECK & USER SETUP ---
     const currentUser = localStorage.getItem('planner_currentUser');
     if (!currentUser) {
-        window.location.href = 'index.html';
+        // CORRECTION: Point to your specific HTML file name
+        window.location.href = 'index_html.html';
         return; 
     }
 
@@ -29,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function logout() {
         localStorage.removeItem('planner_currentUser'); 
-        window.location.href = 'index.html'; 
+        // CORRECTION: Point to your specific HTML file name
+        window.location.href = 'index_html.html'; 
     }
 
     function saveTasks() {
