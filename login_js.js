@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (foundUser) {
             localStorage.setItem('planner_currentUser', user);
-            window.location.href = 'planner.html';
+            // CORRECTION: Point to your specific HTML file name
+            window.location.href = 'planner_html.html';
         } else {
             loginError.textContent = 'Invalid username or password.';
         }
